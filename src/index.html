@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Vanilla Books</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+		/>
+		<link rel="stylesheet" href="./scss/main.scss" />
+	</head>
+	<body>
+		<div id="root">
+			<header>
+				<div class="ui menu">
+					<div class="header item">Vanilla Books</div>
+					<div class="right menu"><a class="item">Username</a></div>
+				</div>
+			</header>
+			<!-- divider -->
+			<main>
+				<div class="form">
+					<h2 class="ui header">
+						<i class="circular book icon"></i>Новая книга
+					</h2>
+					<form class="ui form segment">
+						<div class="field">
+							<label>Book title</label>
+							<input
+								type="text"
+								name="book-title"
+								placeholder="Book title"
+							/>
+						</div>
+						<div class="field">
+							<label>Author name</label>
+							<input
+								type="text"
+								name="author-name"
+								placeholder="Author name"
+							/>
+						</div>
+						<div class="ui divider"></div>
+						<div class="ui buttons">
+							<button class="ui positive button">Save</button>
+							<div class="or"></div>
+							<button class="ui button">Cancel</button>
+						</div>
+					</form>
+				</div>
+				<!-- divider -->
+				<div class="list">
+					<h2 class="ui header">
+						<i class="circular list icon"></i>Список книг
+					</h2>
+					<div class="ui segment">
+						<div class="ui relaxed divided list">
+							<div class="item">
+								<div class="right floated content">
+									<div class="ui animated fade button blue">
+										<div class="hidden content">Edit</div>
+										<div class="visible content">
+											<i class="pencil icon"></i>
+										</div>
+									</div>
+									<div class="ui animated fade button red">
+										<div class="hidden content">Delete</div>
+										<div class="visible content">
+											<i class="trash icon"></i>
+										</div>
+									</div>
+								</div>
+								<div class="content">
+									<div class="header">Snickerdoodle</div>
+									An excellent companion
+								</div>
+							</div>
+							<div class="item">
+								<div class="right floated content">
+									<div class="ui animated fade button blue">
+										<div class="hidden content">Edit</div>
+										<div class="visible content">
+											<i class="pencil icon"></i>
+										</div>
+									</div>
+									<div class="ui animated fade button red">
+										<div class="hidden content">Delete</div>
+										<div class="visible content">
+											<i class="trash icon"></i>
+										</div>
+									</div>
+								</div>
+								<div class="content">
+									<div class="header">Poodle</div>
+									A poodle, its pretty basic
+								</div>
+							</div>
+							<div class="item">
+								<div class="right floated content">
+									<div class="ui animated fade button blue">
+										<div class="hidden content">Edit</div>
+										<div class="visible content">
+											<i class="pencil icon"></i>
+										</div>
+									</div>
+									<div class="ui animated fade button red">
+										<div class="hidden content">Delete</div>
+										<div class="visible content">
+											<i class="trash icon"></i>
+										</div>
+									</div>
+								</div>
+								<div class="content">
+									<div class="header">Paulo</div>
+									He's also a dog
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>
