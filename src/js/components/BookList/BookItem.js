@@ -4,6 +4,7 @@ import ListButton from '../UI/ListButton'
 import { fillBookForm, deleteBook } from '../../db'
 import toggleLoading from '../../functions/toggleLoading'
 import BookList from '.'
+import BookForm from '../BookForm'
 
 export default class BookItem extends Component {
 	constructor(params) {
@@ -47,10 +48,11 @@ export default class BookItem extends Component {
 			{
 				onClick: () => {
 					toggleLoading()
-					if (!confirm('Вы уверены, что хотите удалить книгу?'))
+					if (!confirm('Are you sure you want to delete book?'))
 						toggleLoading()
 					deleteBook(bookId)
 					BookList.deleteItem(bookId)
+					BookForm.clearForm()
 					setTimeout(() => toggleLoading(), 300)
 				}
 			}

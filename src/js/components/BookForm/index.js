@@ -58,11 +58,11 @@ export default class BookForm extends Component {
 			updateBook(formData)
 			BookList.editItem(formData)
 		}
-		this.clearForm()
+		BookForm.clearForm()
 		setTimeout(() => toggleLoading(), 300)
 	}
 
-	clearForm() {
+	static clearForm() {
 		const elems = Array.from(document.querySelectorAll('.bookForm input'))
 		elems.forEach(el => (el.value = ''))
 		BookItem.unselectAllItems()
@@ -74,7 +74,7 @@ export default class BookForm extends Component {
 		buttons.appendChild(this.renderSubmitBtn())
 		buttons.appendChild(this.renderBtnDivider())
 		buttons.appendChild(this.renderCancelBtn())
-		elem.onsubmit = () => this.onFormSubmit(event)
+		elem.onsubmit = (event) => this.onFormSubmit(event)
 		this.elem = elem
 	}
 }
